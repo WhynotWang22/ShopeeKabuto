@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:layout_height="match_parent"
+    tools:context=".activity.ThongtinActivity">
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbarthongtin"
+    app:title="Thông tin"
+    app:titleTextColor="@color/white"
+    android:background="#03A9F4"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    tools:ignore="MissingConstraints">
+</androidx.appcompat.widget.Toolbar>
+   <LinearLayout
+       android:layout_weight="2"
+        android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="0dp">
+      <ImageView
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+         android:src="@drawable/cart"/>
+      <TextView
+          android:layout_marginTop="10dp"
+          android:layout_width="wrap_content"
+          android:textColor="#00BCD4"
+          android:textStyle="bold"
+          android:textSize="20sp"
+          android:layout_marginLeft="5dp"
+          android:layout_height="wrap_content"
+         android:text="Địa Chỉ:Kiến Quốc -Kiến Thụy -HP"/>
+   </LinearLayout>
+   <LinearLayout
+      android:layout_weight="8"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="0dp">
+      <fragment
+          android:id="@+id/map"
+          android:name="com.google.android.gms.maps.SupportMapFragment"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"/>
+   </LinearLayout>
+</LinearLayout>
