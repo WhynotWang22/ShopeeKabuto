@@ -18,6 +18,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import com.android.volley.RequestQueue;
@@ -25,7 +26,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.qlshopquanaonhom6.shoponline.R;
 import com.qlshopquanaonhom6.shoponline.adapter.LoaispAdapter;
 import com.qlshopquanaonhom6.shoponline.adapter.SanphamAdapter;
@@ -62,6 +66,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
+                    @Override
+                    public void onComplete(@NonNull Task<String> task) {
+                        if (!task.isSuccessful()) {
+                            System.out.println( );
+                            return;
+                        }
+
+                        // Get new FCM registration token
+                        String token = task.getResult();
+
+                        // Log and toast
+                        System.out.println(token);
+                        Toast.makeText(MainActivity.this,"your device is" + token,
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
         Anhxa();
         if (CheckConnection.haveNetwordConnection(getApplicationContext())){
             ActionBar();
@@ -208,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
                       }
                   }
                   mangloaisp.add(3,new Loaisp(0,"Liên hệ","https://png.pngtree.com/png-vector/20190804/ourlarge/pngtree-call-contact-delete-png-image_1650527.jpg"));
-                    mangloaisp.add(4,new Loaisp(0,"Thông tin","https://movan.vn/wp-content/uploads/2017/08/email-marketing-copy-header-final-SEO-Movan_vn.HoangHai.jpg"));
+                    mangloaisp.add(4,new Loaisp(0,"Thông tin","https://png.pngtree.com/png-vector/20190411/ourlarge/pngtree-vector-information-icon-png-image_925431.jpg"));
                 }
             }
         }, new Response.ErrorListener() {

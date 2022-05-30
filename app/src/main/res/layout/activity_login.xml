@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_marginTop="50dp"
+    android:background="#CCCCCC"
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".activity.LoginActivity">
@@ -16,14 +16,14 @@
        <ImageView
            android:layout_width="match_parent"
            android:layout_height="150dp"
-           app:srcCompat="@drawable/clotheshanger" />
+           app:srcCompat="@drawable/logo_shop_removebg_preview" />
        <com.google.android.material.textfield.TextInputLayout
            android:layout_width="match_parent"
            android:layout_marginTop="20dp"
            android:layout_marginLeft="8dp"
            android:layout_marginRight="8dp"
            android:layout_height="wrap_content"
-           android:hint="Username"
+           android:hint="Email"
            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
            <com.google.android.material.textfield.TextInputEditText
                android:layout_width="match_parent"
@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@drawable/btn_bg"
-
+        android:backgroundTint="#7878e6"
         android:layout_marginHorizontal="20dp"
         android:id="@+id/btnLogin"
         android:text="Login"/>
@@ -93,4 +93,14 @@
         android:background="@color/transparent"
         android:id="@+id/btnSignUp"
         android:text="Sign up here"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2002-Louis VuiTTon"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="320dp"/>
 </LinearLayout>
