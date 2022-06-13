@@ -4,7 +4,6 @@
     package="com.qlshopquanaonhom6.shoponline"
     tools:ignore="CoarseFineLocation">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -12,13 +11,24 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/clothesshop"
+        android:icon="@mipmap/shoppe"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/clothesshop"
+        android:roundIcon="@mipmap/shoppe"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShopOnline"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Forgot_pass_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RegisterUser"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivityLogin"
+            android:exported="false" />
         <activity
             android:name=".activity.SplashScreen"
             android:exported="true">
@@ -59,7 +69,7 @@
             android:exported="true" />
         <activity
             android:name=".activity.LoginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activity.ThemUserActivity"
             android:exported="true" />

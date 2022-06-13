@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#CCCCCC"
+    android:layout_height="match_parent"
+    tools:context=".activity.RegisterUser">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reg"
+        android:text="Đăng Ký"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="140dp"
+        >
+    </TextView>
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="110dp"
+        android:src="@drawable/logo_shop_removebg_preview"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginTop="40dp"
+          android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fullname"
+            android:ems="10"
+            android:inputType="text"
+            android:id="@+id/fullName"
+            >
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:id="@+id/password"
+            >
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:id="@+id/email"
+            >
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+        tools:ignore="MissingConstraints">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:ems="10"
+            android:inputType="number"
+            android:id="@+id/age"
+            >
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/registerUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0ED6B9"
+        android:text="REGISTER user"
+        android:textColor="#ffffff"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/banner"
+        android:text="2002-Uy Tín - Chất Lượng"
+        android:textStyle="italic|bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="100dp"
+        >
+    </TextView>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+</LinearLayout>

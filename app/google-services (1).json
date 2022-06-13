@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "108535036497",
+    "project_id": "shopquanao-ff2b6",
+    "storage_bucket": "shopquanao-ff2b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108535036497:android:63dc8a3e1350cfd5fb5670",
+        "android_client_info": {
+          "package_name": "com.qlshopquanaonhom6.shoponline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108535036497-h7k9giecetbmlmb3mddsjsjlqbi9jfrr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qlshopquanaonhom6.shoponline",
+            "certificate_hash": "8ac7ebe9af6694ac3266305c90ebd90d9c92c1bd"
+          }
+        },
+        {
+          "client_id": "108535036497-74m8lvij3nu6v97mpfk1d5vefr6avcda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0E65ltBKswRRTqO4nYHeMNegjlCt2cxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108535036497-74m8lvij3nu6v97mpfk1d5vefr6avcda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

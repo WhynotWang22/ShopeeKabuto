@@ -166,6 +166,17 @@ public class MainActivity extends AppCompatActivity {
                         }
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
+
+                    case 5:
+                        if (CheckConnection.haveNetwordConnection(getApplicationContext())){
+                            Intent intent = new Intent(MainActivity.this,ProfileActivity.class);
+                            startActivity(intent);
+                        }
+                        else{
+                            CheckConnection.showToast_Short(getApplicationContext(),"Không có kết nối");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
                 }
 
             }
@@ -231,6 +242,7 @@ public class MainActivity extends AppCompatActivity {
                   }
                   mangloaisp.add(3,new Loaisp(0,"Liên hệ","https://png.pngtree.com/png-vector/20190804/ourlarge/pngtree-call-contact-delete-png-image_1650527.jpg"));
                     mangloaisp.add(4,new Loaisp(0,"Thông tin","https://png.pngtree.com/png-vector/20190411/ourlarge/pngtree-vector-information-icon-png-image_925431.jpg"));
+                    mangloaisp.add(5,new Loaisp(0,"Đăng Xuất","https://png.pngtree.com/png-vector/20190721/ourmid/pngtree-logout--icon-in-trendy-style-isolated-background-png-image_1566217.jpg"));
                 }
             }
         }, new Response.ErrorListener() {
